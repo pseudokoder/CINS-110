@@ -1,6 +1,7 @@
 # Alan-Turing
 CINS110
 Author: Wes Leiter
+
 Alan Turing
 * He was an Olympic-level runner
 * He developed a new field of biology out of his fascination with daisies
