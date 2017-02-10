@@ -9,6 +9,10 @@ body {
     font-family: Impact, Charcoal, sans-serif;
 }
 
-#spoil-protect {
+span {
   color: #80b3ff;
+}
+
+#spoil-protect:hover {
+  background-color: #ff4d4d;
 }
