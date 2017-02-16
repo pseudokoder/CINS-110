@@ -4,7 +4,6 @@ div.nav-tab {
 }
 div.nav-tab:hover {
   background-color: mediumpurple;
-  border-style: solid;
 }
 .navigation {
   text-decoration: none;
