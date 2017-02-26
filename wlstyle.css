@@ -29,7 +29,7 @@ input[type="submit"] {
   background: red;
   color: white;
 }
-ul {
+ul.nav-tab {
   padding: 10px;
   background: rgba(0,0,0,0.7);
 }
@@ -37,7 +37,8 @@ li {
   display: inline;
   padding: 0px 10px 0px 10px;
 }
-a {
+a.navigation {
+  text-decoration: none;
   color: white;
 }
 @media (max-width: 500px) {
