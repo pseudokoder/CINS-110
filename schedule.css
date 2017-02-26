@@ -1,0 +1,14 @@
+table {
+    text-align: left;
+    /*width: 70%;*/
+    height: 50px;
+
+}
+th {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+th, td {
+  width: 100px;
+}
