@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+  background: url("http://wesleiter.com/img/Sony_613smaller.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: helvetica;
+}
+img {
+  margin: 20px 0px 0px 0px;
+  border: 7px solid	white;
+  border-radius: 200px;
+}
+h1 {
+  font-size: 50px;
+  text-shadow: 2px 2px 4px #000000;
+}
+p {
+  font-size: 20px;
+  background: rgba(0,0,0,0.7);
+  padding: 10px;
+}
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+input[type="submit"] {
+  background: red;
+  color: white;
+}
+ul {
+  padding: 10px;
+  background: rgba(0,0,0,0.7);
+}
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+a {
+  color: white;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 36px;
+  }
+  li {
+    display: block;
+    padding: 5px;
+  }
+}
