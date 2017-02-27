@@ -1,10 +1,13 @@
 body {
-  text-align: center;
   background: url("http://wesleiter.com/img/Sony_613smaller.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: white;
-  font-family: helvetica;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
 }
 img {
   margin: 20px 0px 0px 0px;
@@ -14,33 +17,42 @@ img {
 h1 {
   font-size: 50px;
   text-shadow: 2px 2px 4px #000000;
+  color: white;
 }
 p {
   font-size: 20px;
   background: rgba(0,0,0,0.7);
   padding: 10px;
+  color: white;
 }
-input {
-  border: 0;
-  padding: 10px;
+/* The Navigation Bar */
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
+  position: relative;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.menu li {
+  display: inline-block;
+}
+.menu li a {
+  display: block;
+  color: white;
+  padding: 5px 16px 5px 16px;
+  text-align: center;
+  text-decoration: none;
   font-size: 18px;
 }
-ul.nav-tab {
-  padding: 10px;
-  background: rgba(0,0,0,0.7);
-}
-li {
-  display: inline;
-  padding: 0px 10px 0px 10px;
-}
-li:hover {
-  display: inline;
-  padding: 0px 10px 0px 10px;
+.menu li a:hover:not(.active) {
   background: rgba(0,102,0,0.7);
 }
-a.navigation {
-  text-decoration: none;
-  color: white;
+.active {
+  background: rgba(51,153,51,0.7);
 }
 @media (max-width: 500px) {
   h1 {
