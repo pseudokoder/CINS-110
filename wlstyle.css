@@ -1,5 +1,4 @@
 /* Author: Wes Leiter */
-
 body {
   background: url("http://wesleiter.com/img/Sony_613smaller.jpg");
   background-size: cover;
@@ -32,6 +31,19 @@ h1 {
 }
 p {
   text-indent: 50px;
+}
+a:link {
+  color: lightgreen;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: lightblue;
+}
+#chicocolors {
+  color: rgb(196,30,58)
 }
 /* The Navigation Bar */
 .menu ul {
