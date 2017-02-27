@@ -1,3 +1,5 @@
+/* Author: Wes Leiter */
+
 body {
   background: url("http://wesleiter.com/img/Sony_613smaller.jpg");
   background-size: cover;
@@ -6,8 +8,17 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+#intro {
+  margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
+  text-align: center;
+}
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
+  background: rgba(0,0,0,0.7);
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+  font-family: Georgia, serif;
 }
 img {
   margin: 20px 0px 0px 0px;
@@ -20,10 +31,7 @@ h1 {
   color: white;
 }
 p {
-  font-size: 20px;
-  background: rgba(0,0,0,0.7);
-  padding: 10px;
-  color: white;
+  text-indent: 50px;
 }
 /* The Navigation Bar */
 .menu ul {
@@ -49,10 +57,10 @@ p {
   font-size: 18px;
 }
 .menu li a:hover:not(.active) {
-  background: rgba(0,102,0,0.7);
+  background: rgba(51,153,51,0.7);
 }
 .active {
-  background: rgba(51,153,51,0.7);
+  background: rgba(30,130,30,0.7);
 }
 @media (max-width: 500px) {
   h1 {
