@@ -11,6 +11,9 @@ body {
   margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
   text-align: center;
 }
+#button {
+    text-align: center;
+}
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
   background: rgba(0,0,0,0.7);
@@ -24,12 +27,25 @@ body {
   border: 7px solid	white;
   border-radius: 200px;
 }
+.img2 {
+    height: 75px;
+    width: 75px;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.img3 {
+    background: white;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+}
 h1 {
   font-size: 50px;
   text-shadow: 2px 2px 4px #000000;
   color: white;
 }
-p {
+.indent p {
   text-indent: 50px;
 }
 a:link {
