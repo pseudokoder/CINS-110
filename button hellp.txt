@@ -1,0 +1,29 @@
+
+http://www.csuchico.edu/desweb/resources/images/flame_text28x315r.gif
+
+http://www.csuchico.edu/desweb/resources/images/flame_text37x450r.gif
+
+http://betohernandez.com/git_pic.png
+
+http://betohernandez.com/linkedin.png
+
+.img2 {
+    height: 175px;
+    width: 175px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#button {
+    text-align: center;
+}
+
+<div id="button">
+    <a href="http://www.linkedin.com/pub/humberto-hernandez/b1/7a7/b62/en">
+      <img class="img2" src="linkedin.png">
+    </a>
+    <a href="https://github.com/HumbertoBeto">
+      <img class="img2" src="git_pic.png">
+    </a>
+  </div>
