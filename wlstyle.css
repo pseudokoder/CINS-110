@@ -14,20 +14,6 @@ body {
 #button {
   text-align: center;
 }
-/* Button attributes courtesy of W3 schools
-https://www.w3schools.com/w3css/w3css_buttons.asp */
-.w3-btn {
-  margin-bottom: 5px;
-  box-shadow: none;
-}
-.w3-white, .w3-hover-white:hover {
-  color: #000!important;
-  background-color: #fff!important;
-}
-.w3-ripple {
-  -webkit-transition: opacity 0s;
-  transition: opacity 0s;
-}
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
   background: rgba(0,0,0,0.7);
