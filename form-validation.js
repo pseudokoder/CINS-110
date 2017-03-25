@@ -1,4 +1,8 @@
-function validate(){
+function register(){
+
+}
+
+function validateUsername(){
   //Grab the user's input and store in variables
   var userEntered = document.getElementById("user").value;
   var userLength = userEntered.length;
@@ -12,6 +16,7 @@ function validate(){
     document.getElementById("usernameError").classList.remove("hidden-message");
     document.getElementById("usernameError").classList.add("shown-message");
     //Turn the username items red
+    document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("usernameGroup").classList.add("has-error");
   }
   else if (userSpace != -1) {
@@ -19,12 +24,16 @@ function validate(){
     document.getElementById("usernameError").classList.remove("hidden-message");
     document.getElementById("usernameError").classList.add("shown-message");
     //Turn the username items red
+    document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("usernameGroup").classList.add("has-error");
   }
   else {
+    document.getElementById("passwordGroup").classList.remove("has-error");
     document.getElementById("usernameGroup").classList.add("has-success");
   }
+}
 
+function validatePassword(){
   //Show message that there is an error with the password...
   if (passEntered == "password" ||
       passEntered == "Password" ||
@@ -35,6 +44,7 @@ function validate(){
     document.getElementById("passwordError").classList.remove("hidden-message");
     document.getElementById("passwordError").classList.add("shown-message");
     //Turn the password items red
+    document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("passwordGroup").classList.add("has-error");
   }
   else if (passLength < 6 || passLength > 20) {
@@ -42,9 +52,11 @@ function validate(){
     document.getElementById("passwordError").classList.remove("hidden-message");
     document.getElementById("passwordError").classList.add("shown-message");
     //Turn the password items red
+    document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("passwordGroup").classList.add("has-error");
   }
   else {
+    document.getElementById("passwordGroup").classList.remove("has-error");
     document.getElementById("passwordGroup").classList.add("has-success");
   }
 }
