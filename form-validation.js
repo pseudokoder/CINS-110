@@ -20,11 +20,13 @@ function validateUsername(){
     document.getElementById("usernameError").classList.remove("hidden-message");
     document.getElementById("usernameError").classList.add("shown-message");
     //Turn the username items red
-    //document.getElementById("usernameGroup").classList.remove("has-success");
+    document.getElementById("usernameGroup").classList.remove("has-success");
     document.getElementById("usernameGroup").classList.add("has-error");
   }
   else {
-    //document.getElementById("usernameGroup").classList.remove("has-error");
+    document.getElementById("usernameError").classList.remove("shown-message");
+    document.getElementById("usernameError").classList.add("hidden-message");
+    document.getElementById("usernameGroup").classList.remove("has-error");
     document.getElementById("usernameGroup").classList.add("has-success");
   }
 }
@@ -42,7 +44,7 @@ function validatePassword(){
     document.getElementById("passwordError").classList.remove("hidden-message");
     document.getElementById("passwordError").classList.add("shown-message");
     //Turn the password items red
-    //document.getElementById("passwordGroup").classList.remove("has-success");
+    document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("passwordGroup").classList.add("has-error");
   }
   else if (passLength < 6 || passLength > 20) {
@@ -50,11 +52,13 @@ function validatePassword(){
     document.getElementById("passwordError").classList.remove("hidden-message");
     document.getElementById("passwordError").classList.add("shown-message");
     //Turn the password items red
-    //document.getElementById("passwordGroup").classList.remove("has-success");
+    document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("passwordGroup").classList.add("has-error");
   }
   else {
-    //document.getElementById("passwordGroup").classList.remove("has-error");
+    document.getElementById("passwordError").classList.remove("shown-message");
+    document.getElementById("passwordError").classList.add("hidden-message");
+    document.getElementById("passwordGroup").classList.remove("has-error");
     document.getElementById("passwordGroup").classList.add("has-success");
   }
 }
@@ -62,5 +66,5 @@ function validatePassword(){
 function register(){
   var userEntered = document.getElementById("user").value;
   var passEntered = document.getElementById("pass").value;
-  window.alert("Username: " + userEntered + "\nPassword: " + passEntered);
+  window.confirm("Username: " + userEntered + "\nPassword: " + passEntered);
 }
