@@ -12,7 +12,7 @@ function validateUsername(){
     document.getElementById("usernameError").classList.remove("hidden-message");
     document.getElementById("usernameError").classList.add("shown-message");
     //Turn the username items red
-    //document.getElementById("passwordGroup").classList.remove("has-success");
+    document.getElementById("usernameGroup").classList.remove("has-success");
     document.getElementById("usernameGroup").classList.add("has-error");
   }
   else if (userSpace != -1) {
@@ -20,11 +20,11 @@ function validateUsername(){
     document.getElementById("usernameError").classList.remove("hidden-message");
     document.getElementById("usernameError").classList.add("shown-message");
     //Turn the username items red
-    //document.getElementById("passwordGroup").classList.remove("has-success");
+    //document.getElementById("usernameGroup").classList.remove("has-success");
     document.getElementById("usernameGroup").classList.add("has-error");
   }
   else {
-    //document.getElementById("passwordGroup").classList.remove("has-error");
+    //document.getElementById("usernameGroup").classList.remove("has-error");
     document.getElementById("usernameGroup").classList.add("has-success");
   }
 }
@@ -34,11 +34,9 @@ function validatePassword(){
   var userEntered = document.getElementById("user").value;
   var passEntered = document.getElementById("pass").value;
   var passLength = passEntered.length;
+  var passLower = passEntered.toLowerCase();
 
-  if (passEntered == "password" ||
-      passEntered == "Password" ||
-      passEntered == "PASSWORD" ||
-      passEntered == userEntered)
+  if (passLower == "password" || passEntered == userEntered)
   {
     document.getElementById("passwordError").innerHTML="Password must NOT be the word \"password\" or be the same as the Username.";
     document.getElementById("passwordError").classList.remove("hidden-message");
@@ -64,5 +62,5 @@ function validatePassword(){
 function register(){
   var userEntered = document.getElementById("user").value;
   var passEntered = document.getElementById("pass").value;
-  alert("Username: " userEntered)//"\nPassword: " passEntered)
+  window.alert("Username: " + userEntered + "\nPassword: " + passEntered);
 }
