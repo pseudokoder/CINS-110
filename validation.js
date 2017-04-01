@@ -51,16 +51,68 @@ function begin(){
 
 function submit1(){
   var ansEntered = document.getElementById("answer").value;
-  window.confirm("You answered: " + ansEntered);
+  var ansUpper = ansEntered.toUpperCase();
+  if (ansUpper == "B") {
+    setCookie("ans1", 1, 1);
+    window.confirm("You answered: " + ansUpper + "\nThat's correct!");
+  } else {
+    setCookie("ans1", 0, 1);
+    window.confirm("You answered: " + ansUpper + "\nSorry, that's  not correct!");
+  }
   window.location.href="test2.html";
 }
 function submit2(){
   var ansEntered = document.getElementById("answer").value;
-  window.confirm("You answered: " + ansEntered);
+  var ansUpper = ansEntered.toUpperCase();
+  if (ansUpper == "A") {
+    setCookie("ans2", 1, 1);
+    window.confirm("You answered: " + ansUpper + "\nThat's correct!");
+  } else {
+    setCookie("ans2", 0, 1);
+    window.confirm("You answered: " + ansUpper + "\nSorry, that's  not correct!");
+  }
   window.location.href="test3.html";
 }
 function submit3(){
   var ansEntered = document.getElementById("answer").value;
-  window.confirm("You answered: " + ansEntered);
+  var ansUpper = ansEntered.toUpperCase();
+  if (ansUpper == "D") {
+    setCookie("ans3", 1, 1);
+    window.confirm("You answered: " + ansUpper + "\nThat's correct!");
+  } else {
+    setCookie("ans3", 0, 1);
+    window.confirm("You answered: " + ansUpper + "\nSorry, that's  not correct!");
+  }
   window.location.href="results.html";
+}
+function results(){
+  var ans1 = getCookie("ans1");
+  var ans2 = getCookie("ans2");
+  var ans3 = getCookie("ans3");
+  var results = ans1 + ans2 + ans3;
+  results /= 3;
+  document.getElementById("results").innerHTML = "" + results +"%";
+}
+// setCookie and getCookie are courtesy of W3 Schools
+// https://www.w3schools.com/js/js_cookies.asp
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
