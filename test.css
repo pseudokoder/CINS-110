@@ -13,7 +13,6 @@ body {
   margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
   text-align: center;
 }
-
 .main {
   margin-top: 40px; /* Add a top margin to avoid content overlay by menu */
   background: rgba(0,0,0,0.7);
@@ -24,6 +23,13 @@ body {
 }
 .indent p {
   text-indent: 50px;
+}
+.qmar {
+  margin-left: 30px;
+  font-size: 20px;
+}
+.button {
+  text-align: center;
 }
 span.hidden-message{
   opacity: 0.0;

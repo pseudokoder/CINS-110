@@ -2,64 +2,68 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <!-- BOOTSTRAP (style only)-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="test.css" />
-    <title>Intelligence Test - Page 1</title>
-    <script type="text/javascript" src="validation.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <!-- BOOTSTRAP (style only)-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="test.css" />
+  <title>Intelligence Test - Page 1</title>
+  <script type="text/javascript" src="validation.js"></script>
+</head>
 
-  <body lang="en-US">
-    <div id="img src">
-      <a href="http://redroomnola.com/wp-content/uploads/2016/09/web-design-new-orleans-background-2.jpg"
-         target="_blank">
-        [Background Image Source]
-      </a>
+<body lang="en-US">
+  <div>
+    <a href="http://redroomnola.com/wp-content/uploads/2016/09/web-design-new-orleans-background-2.jpg"
+    target="_blank">
+    [Background Image Source]
+  </a>
+</div>
+<div>
+  <a href="http://www.intelligencetest.com/index.htm"
+     target="_blank">
+    [Test Questions Source]
+  </a>
+</div>
+<div>&nbsp;</div>
+<div id="intro">
+  <h3>Question 1</h3>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<!-- Question courtesy of
+http://www.intelligencetest.com/questions/precognition.htm -->
+<div class="qmar">
+  <div>
+    <h4>Please enter the missing figure: 4, 5, 8, 17, 44, ___ .</h4>
+    <ol type="A">
+      <li>80</li>
+      <li>125</li>
+      <li>112</li>
+      <li>60</li>
+      <li>84</li>
+    </ol>
+  </div>
+
+  <div class="row">
+    <div class="form-group" id="ansGroup">
+      <label class="col-sm-1 control-label">Answer:</label>
+      <div class="col-sm-2">
+        <input type="text" id="answer" class="form-control input-md"
+        placeholder="Example: A"
+        oninput="validateAns();" />
+        <span id="ansError" class="control-label hidden-message">
+          Error Placeholder (hidden)
+        </span>
+      </div>
     </div>
-    <div class="container-fluid">
-      <form class="form-horizontal">
-        <div class="row">
-          <div class="col-sm-offset-2">
-            <h1><small>Create your account</small></h1>
-          </div>
-        </div> <!-- end heading row /-->
-        <div class="row myinput-row">
-          <div class="form-group" id="usernameGroup">
-            <label for="username" class="col-sm-2 control-label">Username</label>
-            <div class="col-sm-2">
-              <input type="text" id="user" class="form-control input-md"
-                  placeholder="myusername"
-                  oninput="validateUsername();" />
-              <span id="usernameError" class="control-label hidden-message">
-                Error Placeholder (hidden)
-              </span>
-            </div>
-          </div>
-        </div> <!-- end username row /-->
-        <div class="row">
-          <div class="form-group" id="passwordGroup">
-            <label for="username" class="col-sm-2 control-label">Password</label>
-            <div class="col-sm-2">
-              <input type="password" id="pass" class="form-control input-md"
-                  placeholder="mypassword"
-                  oninput="validatePassword();" />
-              <span id="passwordError" class="control-label hidden-message">
-                Error Placeholder (hidden)
-              </span>
-            </div>
-          </div>
-        </div> <!-- end username row /-->
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="button" class="btn btn-primary col-sm-1"
-              onclick="register();"> <!-- Run JavaScript to validate input /-->
-              Register
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </body>
+  </div>
+</div>
+<div class="button">
+  <button type="button" class="btn btn-primary"
+  onclick="submit1();">
+  Submit
+</button>
+</div>
+
+</body>
 </html>
