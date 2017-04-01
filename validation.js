@@ -91,6 +91,7 @@ function results(){
   var ans3 = getCookie("ans3");
   var results = ans1 + ans2 + ans3;
   results /= 3;
+  console.log("results = " + results);
   document.getElementById("results").innerHTML = "" + results +"%";
 }
 // setCookie and getCookie are courtesy of W3 Schools
