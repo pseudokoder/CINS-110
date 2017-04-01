@@ -1,4 +1,4 @@
-// Wes Leiter
+// Author: Wes Leiter
 
 function validateUsername(){
   //Grab the user's input and store in variables
@@ -63,6 +63,10 @@ function validatePassword(){
     document.getElementById("passwordGroup").classList.remove("has-error");
     document.getElementById("passwordGroup").classList.add("has-success");
   }
+}
+
+function begin(){
+  window.location.href="test1.html";
 }
 
 function register(){

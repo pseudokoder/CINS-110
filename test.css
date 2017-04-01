@@ -1,5 +1,29 @@
-/* Wes Leiter */
+/* Author: Wes Leiter */
 
+/* background courtesy of redroomnola.com */
+body {
+  background: url("http://redroomnola.com/wp-content/uploads/2016/09/web-design-new-orleans-background-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#intro {
+  margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
+  text-align: center;
+}
+.main {
+  margin-top: 40px; /* Add a top margin to avoid content overlay by menu */
+  background: rgba(0,0,0,0.7);
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+  font-family: Georgia, serif;
+}
+.indent p {
+  text-indent: 50px;
+}
 span.hidden-message{
   opacity: 0.0;
 }
