@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- BOOTSTRAP (style only)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Data Logger</title>
+    <script type="text/javascript" src="datalogger.js"></script>
+  </head>
+  <body lang="en-US">
+    <div class="container-fluid">
+      <form class="form-horizontal">
+        <div class="row">
+          <label for="dataInput" class="col-sm-2 control-label">Number</label>
+          <div class="col-sm-2">
+            <input type="text" id="dataInput" class="form-control input-md"
+                   placeholder="1.23" />
+          </div>
+          <div class="col-sm-2">
+            <button type="button" class="btn btn-default" aria-label="Add">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <label for="total" class="col-sm-2 control-label">Total:</label>
+          <div class="col-sm-1">
+            <span class="label label-default" id="total">-</span>
+          </div>
+        </div>
+        <div class="row">
+          <label for="average" class="col-sm-2 control-label">Average:</label>
+          <div class="col-sm-1">
+            <span class="label label-default" id="average">-</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
