@@ -12,8 +12,8 @@ function addItem()
     runningTotal += newItem; // update runningTotal to be its value plus newItem
     var dollars = asCurrency(runningTotal); // call asCurrency() by with the value of runningTotal and assign the return value to dollars
     document.getElementById("subtotal").innerHTML = dollars; // update the innerHTML of the span with the id "subtotal" to be dollars
-    // update the value of the input with the id "price" to be an empty string
-    // update a cookie called "preTax" with the value of runningTotal
+    document.getElementById("price").value = ""; // update the value of the input with the id "price" to be an empty string
+    setCookie(preTax,runningTotal,1); // update a cookie called "preTax" with the value of runningTotal
   }
 }
 
