@@ -86,13 +86,13 @@ function submit3(){
   window.location.href="results.html";
 }
 function results(){
-  var ans1 = getCookie("ans1");
-  var ans2 = getCookie("ans2");
-  var ans3 = getCookie("ans3");
-  var results = ans1 + ans2 + ans3;
-  results /= 3;
-  console.log("results = " + results);
-  document.getElementById("results").innerHTML = "" + results +"%";
+  var ans1 = Number(getCookie("ans1"));
+  var ans2 = Number(getCookie("ans2"));
+  var ans3 = Number(getCookie("ans3"));
+  var results1 = Number(ans1 + ans2 + ans3);
+  results = (results1/3) * 100;
+  console.log("results1 = " + results1);
+  document.getElementById("results").innerHTML = "" + Math.round(results) +"%";
 }
 // setCookie and getCookie are courtesy of W3 Schools
 // https://www.w3schools.com/js/js_cookies.asp

@@ -13,6 +13,9 @@ body {
   margin-top: 30px; /* Add a top margin to avoid content overlay by menu */
   text-align: center;
 }
+#results {
+  font-size: 20px;
+}
 .main {
   margin-top: 40px; /* Add a top margin to avoid content overlay by menu */
   background: rgba(0,0,0,0.7);
