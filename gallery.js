@@ -25,9 +25,13 @@ var current = 0;
 
 function shuffleGallery()
 {
+  var i = 0;
   do {
-    var i = Math.floor(Math.random() * 5); // generates random intiger between 0 and 4
+    i = Math.floor(Math.random() * 5); // generates random intiger between 0 and 4
   } while (i == current);
   current = i;
+  document.getElementById("picture").src = chico[i].picture;
+  document.getElementById("caption").innerHTML = chico[i].description;
+  document.getElementById("source").innerHTML = "Image courtesy of: " + chico[i].from;
   return i;
 }
