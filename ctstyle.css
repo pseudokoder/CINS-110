@@ -1,10 +1,15 @@
 /* Author: Wes Leiter */
 body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+  padding: 20px;
+}
+#background1 {
   background: url("frustrated-boy-studying.bmp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-family: Arial, Helvetica, sans-serif;
 }
 #ctbtn {
   text-align: center;
@@ -17,7 +22,7 @@ body {
   margin: auto;
 }
 .intro {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.6);
   background-size: cover;
   background-position: center;
   color: white;

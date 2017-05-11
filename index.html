@@ -12,10 +12,10 @@
 	<!-- scripts from ajax.googleapis.com and maxcdn.bootstrapcdn.com are for Modal -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="validation.js"></script>
+	<script type="text/javascript" src="campusTutor.js"></script>
 </head>
 
-<body lang="en-US">
+<body lang="en-US" id="background1">
 	<!--Jumbotron courtesy of bootstrap.com
 	http://getbootstrap.com/components/#jumbotron-->
 	<div class="jumbotron intro">
@@ -26,62 +26,75 @@
 				tutor to help you succeed in the area you struggle with the most.&nbsp;
 				Find local study groups, share study tips &amp; information with your
 				classmates and even sell or trade your old books for the next one you
-				need. &nbsp; Get started today!
+				need. &nbsp; Don't get frustrated! &nbsp; Get started today!
 			</p>
+			<div id="ctbtn" class="container">
+			  <button type="button" class="btn btn-primary btn-lg" onclick="submit();">Get Started</button>
+			</div>
 
 			<!--Modal courtesy of w3schools.com
 			https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_modal&stacked=h-->
+			<!--
 			<div id="ctbtn" class="container">
 			  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
 				data-target="#ctModal">Get Started</button>
 			</div>
   	</div>
-	</div>
+	</div>-->
 
-	<!-- Modal -->
+	<!-- Modal --><!--
 	<div class="modal fade" id="ctModal" role="dialog">
-		<div class="modal-dialog modal-lg">
+		<div class="modal-dialog modal-lg">-->
 
-			<!-- Modal content-->
+			<!-- Modal content--><!--
 			<div class="modal-content ctform">
 
 				<div class="modal-header">
 					<button type="button" class="close"
 					data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Modal Header</h4>
+					<h4 class="modal-title">Student Information</h4>
 				</div>
 
 				<div class="modal-body">
-					<p>Some text in the modal.</p>
+					<p>This information will help us connect you with the right resources.</p>-->
 					<!-- Horizontal form courtesy of w3schools.com
 					https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_horizontal&stacked=h -->
+					<!--
 						<form class="form-horizontal" action="/action_page.php">
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="name">First Name:
 								</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="name"
-									placeholder="Enter email" name="name">
+									<input type="text" autocomplete="off" class="form-control"
+									id="name"	placeholder="Enter name" name="name">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="major">Major:</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="major"
-									placeholder="Enter major" name="major">
+									<input type="text" autocomplete="off" class="form-control"
+									id="major" placeholder="Enter major" name="major">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="phone">Phone:</label>
+								<div class="col-sm-10">
+									<input type="text" autocomplete="off" class="form-control"
+									id="phone" placeholder="(XXX) XXX-XXXX" name="phone"
+									onchange="validateInput();">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
 									<p>Tell us which classes you are taking this semester:</p>
 									<label class="checkbox-inline">
-							      <input type="checkbox" value="">MATH 217
+							      <input type="checkbox" autocomplete="off" value="">MATH 217
 							    </label>
 							    <label class="checkbox-inline">
-							      <input type="checkbox" value="">PHYS 204A
+							      <input type="checkbox" autocomplete="off" value="">PHYS 204A
 							    </label>
 							    <label class="checkbox-inline">
-							      <input type="checkbox" value="">CSCI 110
+							      <input type="checkbox" autocomplete="off" value="">CSCI 110
 							    </label>
 								</div>
 							</div>
@@ -90,7 +103,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button type="submit" class="btn btn-default" onclick="submit();">
+					<button type="submit" class="btn btn-default" onclick="getFormInput();"
+					data-toggle="modal" formaction="ctmain.html">
 						<b>Submit</b>
 					</button>
 					<button type="button" class="btn btn-default" data-dismiss="modal">
@@ -100,7 +114,7 @@
 			</div>
 
 		</div>
-	</div>
+	</div>-->
 
 
 	<div>
