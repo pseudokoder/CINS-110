@@ -6,9 +6,35 @@ function getFormInput(){
   var name = document.getElementById("name").value;
   var major = document.getElementById("major").value;
   var phone = document.createElement("phone").value;
+  var subjects;
+  var math = document.createElement("ckMath").checked;
+  if (math) {
+    subjects.push("MATH");
+  }
+  var phys = document.createElement("ckPhys").checked;
+  if (phys) {
+    subjects.push("PHYS");
+  }
+  var csci = document.createElement("ckCsci").checked;
+  if (csci) {
+    subjects.push("CSCI");
+  }
+  var engl = document.createElement("ckEngl").checked;
+  if (engl) {
+    subjects.push("ENGL");
+  }
+  var acct = document.createElement("ckAcct").checked;
+  if (acct) {
+    subjects.push("ACCT");
+  }
+  var hist = document.createElement("ckHist").checked;
+  if (hist) {
+    subjects.push("HIST");
+  }
   console.log(name);
   console.log(major);
   console.log(phone);
+
 }
 // setCookie and getCookie are courtesy of W3 Schools
 // https://www.w3schools.com/js/js_cookies.asp
