@@ -16,6 +16,41 @@
 </head>
 
 <body lang="en-US" id="background1">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Campus Tutor</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="ctmain.html">Home</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown"
+							href="ctstore.html">Store <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="ctbookstore.html">Books</a></li>
+							<li><a href="cttechstore.html">Technology</a></li>
+							<li><a href="ctfunstore.html">For Fun</a></li>
+						</ul>
+					</li>
+					<li><a href="ctvideos.html">Videos</a></li>
+					<li><a href="ctform.html">Search</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="ctusrprofile.html">
+						<span class="glyphicon glyphicon-user"></span> Profile</a></li>
+					<!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 	<!--Jumbotron courtesy of bootstrap.com
 	http://getbootstrap.com/components/#jumbotron-->
 	<div class="jumbotron intro">
@@ -29,7 +64,8 @@
 				need. &nbsp; Don't get frustrated! &nbsp; Get started today!
 			</p>
 			<div id="ctbtn" class="container">
-			  <button type="button" class="btn btn-primary btn-lg" onclick="submit();">Get Started</button>
+			  <button type="button" class="btn btn-primary btn-lg"
+				onclick="submit();">Get Started</button>
 			</div>
 
 			<!--Modal courtesy of w3schools.com

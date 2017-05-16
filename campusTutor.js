@@ -48,19 +48,26 @@ if (typeof(Storage) !== "undefined") {
 // validateEmail function adapted from w3schools function
 // https://www.w3schools.com/Js/tryit.asp?filename=tryjs_form_validate_email
 function validateEmail() {
-    var x = document.forms["ctform"]["email"].value;
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        document.getElementById("emailError").innerHTML="Please enter a valid e-mail address";
-        document.getElementById("emailError").classList.remove("hidden-message");
-        document.getElementById("emailError").classList.add("shown-message");
-        //Turn the username items red
-        document.getElementById("email").classList.remove("has-success");
-        document.getElementById("email").classList.add("has-error");
-        alert("Not a valid e-mail address");
-        return false;
-    }
+  var x = document.forms["ctform"]["email"].value;
+  var atpos = x.indexOf("@");
+  var dotpos = x.lastIndexOf(".");
+
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+    document.getElementById("emailError").innerHTML="Please enter a valid e-mail address";
+    document.getElementById("emailError").classList.remove("hidden-message");
+    document.getElementById("emailError").classList.add("shown-message");
+    //Turn the username items red
+    document.getElementById("emailgroup").classList.remove("has-success");
+    document.getElementById("emailgroup").classList.add("has-error");
+    //alert("Not a valid e-mail address");
+    return false;
+  }
+  else {
+    document.getElementById("emailgroup").classList.remove("shown-message");
+    document.getElementById("emailgroup").classList.add("hidden-message");
+    document.getElementById("emailgroup").classList.remove("has-error");
+    document.getElementById("emailgroup").classList.add("has-success");
+  }
 }
 function validate(){
   //Show message that there is an error with the password...
