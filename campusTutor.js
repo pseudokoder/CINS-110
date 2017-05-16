@@ -1,48 +1,62 @@
 // Author: Wes Leiter
+
+function getProfile() {
+  var name = Number(getCookie("name"));
+  var major = Number(getCookie("major"));
+  var email = Number(getCookie("email"));
+  var subjects;
+  var i = 1;
+  do {
+    subjects[i] = getCookie("subj"+i);
+    i++;
+  } while (subjects[i]);
+  var profile;
+  profile = {"name":name,
+             "major":major,
+             "email":email,
+             "subjects":subjects
+           };
+}
 function submit() {
   window.location.href="ctform.html";
 }
 function getFormInput(){
-  // Check browser support
-if (typeof(Storage) !== "undefined") {
-    // Store
-    localStorage.setItem("lastname", "Wees");
-    // Retrieve
-    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-} else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
   var name = document.getElementById("name").value;
+  console.log(name);
+  setCookie("name", name, 1);
   var major = document.getElementById("major").value;
-  var phone = document.createElement("phone").value;
-  var subjects;
-  var math = document.createElement("ckMath").checked;
+  setCookie("major", major, 1);
+  var email = document.getElementById("emailgroup").value;
+  setCookie("email", email, 1);
+
+  var math = document.getElementById("ckMath").checked;
   if (math) {
     subjects.push("MATH");
+
   }
-  var phys = document.createElement("ckPhys").checked;
+  var phys = document.getElementById("ckPhys").checked;
   if (phys) {
     subjects.push("PHYS");
   }
-  var csci = document.createElement("ckCsci").checked;
+  var csci = document.getElementById("ckCsci").checked;
   if (csci) {
     subjects.push("CSCI");
   }
-  var engl = document.createElement("ckEngl").checked;
+  var engl = document.getElementById("ckEngl").checked;
   if (engl) {
     subjects.push("ENGL");
   }
-  var acct = document.createElement("ckAcct").checked;
+  var acct = document.getElementById("ckAcct").checked;
   if (acct) {
     subjects.push("ACCT");
   }
-  var hist = document.createElement("ckHist").checked;
+  var hist = document.getElementById("ckHist").checked;
   if (hist) {
     subjects.push("HIST");
   }
-  console.log(name);
-  console.log(major);
-  console.log(phone);
+  for (x in subjects) {
+    console.log(subjects[x]);
+  }
 
 }
 // validateEmail function adapted from w3schools function
@@ -67,44 +81,6 @@ function validateEmail() {
     document.getElementById("emailgroup").classList.add("hidden-message");
     document.getElementById("emailgroup").classList.remove("has-error");
     document.getElementById("emailgroup").classList.add("has-success");
-  }
-}
-function validate(){
-  //Show message that there is an error with the password...
-  var email = document.getElementById("email").value;
-  var emailLength = email.length;
-  var emailSpace = userEntered.search(" ");
-  //var passLower = passEntered.toLowerCase();
-  if (emailSpace != -1) {
-    document.getElementById("emailError").innerHTML="Please enter a valid e-mail address";
-    document.getElementById("emailError").classList.remove("hidden-message");
-    document.getElementById("emailError").classList.add("shown-message");
-    //Turn the username items red
-    document.getElementById("email").classList.remove("has-success");
-    document.getElementById("email").classList.add("has-error");
-  }
-  if (passLower == "password" || passEntered == userEntered)
-  {
-    document.getElementById("passwordError").innerHTML="Password must NOT be the word \"password\" or be the same as the Username.";
-    document.getElementById("passwordError").classList.remove("hidden-message");
-    document.getElementById("passwordError").classList.add("shown-message");
-    //Turn the password items red
-    document.getElementById("passwordGroup").classList.remove("has-success");
-    document.getElementById("passwordGroup").classList.add("has-error");
-  }
-  else if (passLength < 6 || passLength > 20) {
-    document.getElementById("passwordError").innerHTML="Password must be between 6-20 characters.";
-    document.getElementById("passwordError").classList.remove("hidden-message");
-    document.getElementById("passwordError").classList.add("shown-message");
-    //Turn the password items red
-    document.getElementById("passwordGroup").classList.remove("has-success");
-    document.getElementById("passwordGroup").classList.add("has-error");
-  }
-  else {
-    document.getElementById("passwordError").classList.remove("shown-message");
-    document.getElementById("passwordError").classList.add("hidden-message");
-    document.getElementById("passwordGroup").classList.remove("has-error");
-    document.getElementById("passwordGroup").classList.add("has-success");
   }
 }
 function showMatchingSub(){
