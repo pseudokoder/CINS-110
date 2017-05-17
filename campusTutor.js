@@ -57,7 +57,7 @@ function getFormInput(){
   for (x in subjects) {
     console.log(subjects[x]);
   }
-
+  window.location.href="ctmain.html";
 }
 // validateEmail function adapted from w3schools function
 // https://www.w3schools.com/Js/tryit.asp?filename=tryjs_form_validate_email
