@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--Author: Wes Leiter-->
+<head>
+	<title>Gathering Input</title>
+
+  <meta charset="utf-8" />
+	<script lang="javascript">
+		function getName() {
+			var fullName;
+			fullName = document.getElementById("first").value;
+			fullName += "&nbsp;";
+			fullName += document.getElementById("last").value;
+			document.getElementById("message").innerHTML = fullName;
+		}
+	</script>
+</head>
+
+<body>
+	<input type="text" id="first">
+	</input>
+	<input type="text" id="last">
+	</input>
+	<button type="button" id="doneButton" onclick="getName();">
+		Done
+	</button>
+	<p id="message">
+	</p>
+</body>
