@@ -1,0 +1,13 @@
+body {
+  background-color: lightgrey;
+  color: darkred;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkblue;
+}
+
+p.indent_times {
+    text-indent: 25px;
+}
