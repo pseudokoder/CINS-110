@@ -1,0 +1,99 @@
+/* Author: Wes Leiter */
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  text-decoration: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 50px;
+}
+body.index {
+  background-image: url();
+}
+body.form {
+  background-image: url();
+}
+body.home {
+  background-image: url();
+}
+h1 {
+  font-size: 36px;
+  padding-top: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  color: white;
+}
+h4.intro {
+  padding: 10px
+}
+span.hidden-message{
+  opacity: 0.0;
+}
+span.shown-message{
+  opacity: 1.0;
+}
+ul.listMain {
+  list-style-type: none;
+  margin: 5px;
+  padding: 2px;
+}
+#background1 {
+  background: url("frustrated-boy-studying.bmp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.ctbtn {
+  text-align: center;
+}
+.ctform {
+  color: black;
+  text-align: left;
+}
+.center {
+  margin: auto;
+}
+.img {
+  margin: 20px 0px 0px 0px;
+  border: 7px solid	white;
+  border-radius: 200px;
+}
+.img2 {
+  height: 75px;
+  width: 75px;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.img3 {
+  background: white;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.indent {
+  text-indent: 50px;
+}
+.intro {
+  background-color: rgba(0,0,0,0.6);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 36px;
+  }
+  li {
+    display: block;
+    padding: 5px;
+  }
+}
